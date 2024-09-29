@@ -24,6 +24,7 @@ export default function Skills() {
                 <ListItem>C</ListItem>
                 <ListItem>C#</ListItem>
                 <ListItem>Rust</ListItem>
+                <ListItem>Figma</ListItem>
             </List>
             <Text>
                 My soft skills include:

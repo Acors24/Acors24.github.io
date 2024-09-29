@@ -7,8 +7,8 @@ export default function Interests() {
         <TextSection title="Interests">
             <Text>
                 In my spare time, I enjoy creating 3D graphics using{" "}
-                <Link href="https://www.blender.org/">Blender</Link>, learning about
-                new technologies, as well as playing video games.   
+                <Link href="https://www.blender.org/">Blender</Link>, learning
+                new technologies, as well as playing video games.
             </Text>
         </TextSection>
     );
