@@ -184,7 +184,7 @@ export default function GeometryDemo() {
     }, []);
 
     return (
-        <div className="flex-1 w-0">
+        <div className="flex-1 w-0 drop-shadow-2xl">
             <div className="bg-slate-800 text-slate-200 font-mono p-2 rounded-lg overflow-x-scroll">
                 {terminal.map((line, index) => (
                     <TerminalLine key={index} line={line} />
