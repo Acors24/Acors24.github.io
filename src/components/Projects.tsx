@@ -83,7 +83,7 @@ function Project({
 export default function Projects() {
     return (
         <div>
-            <h2 className="text-5xl">Projects</h2>
+            <h1 className="text-5xl">Projects</h1>
             <p className="text-2xl">
                 Here are some of the projects I have worked on in the past. You
                 can find more of my work on{" "}
