@@ -24,9 +24,9 @@ const sections = [
 
 function App() {
     return (
-        <div className="text-slate-700 text-xl">
+        <div className="text-slate-700 text-xl flex flex-col items-center">
             <Nav sections={sections.map(({ id, title }) => ({ id, title }))} />
-            <div>
+            <div className="max-w-[1600px]">
                 {sections.map(({ id, Component }) => (
                     <Section key={id} id={id}>
                         <Component />
