@@ -4,7 +4,7 @@ interface ListProps {
 
 export default function List({ children }: Readonly<ListProps>) {
     return (
-        <ul className="list-disc list-inside">
+        <ul className="list-disc list-outside pl-6">
             {children}
         </ul>
     );
