@@ -13,7 +13,7 @@ export default function Education() {
             </Text>
             <List>
                 <ListItem>
-                    <Link href="https://map.org.pl/mistrzostwa-szkol-srednich-w-programowaniu-zespolowym">
+                    <Link href="https://mistrzostwa.solve.edu.pl/contest/root-map-ed2023-final">
                         Polish High School Championship in Team Programming
                         2023
                     </Link>
@@ -31,6 +31,12 @@ export default function Education() {
                 <ListItem>
                     <Link href="https://math.naboj.org/pl/pl/">
                         Náboj 2024 at University of Economics in Wrocław
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link href="https://mistrzostwa.solve.edu.pl/">
+                        Polish High School Championship in Team Programming
+                        2024
                     </Link>
                 </ListItem>
             </List>
