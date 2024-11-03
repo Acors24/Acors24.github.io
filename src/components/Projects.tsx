@@ -7,6 +7,7 @@ import {
     SiReact,
     SiTailwindcss,
     SiTypescript,
+    SiYoutube,
 } from "react-icons/si";
 import ButtonLink from "./ButtonLink";
 import Link from "./Link";
@@ -16,33 +17,33 @@ import Icon from "./Icon";
 import Gallery from "./Gallery";
 import GeometryDemo from "./GeometryDemo";
 import Image from "./Image";
-import { IconType } from "react-icons";
 import Text from "./Text";
 import TextSection from "./TextSection";
+
+const techToIcon = {
+    "C++": SiCplusplus,
+    "OpenGL": SiOpengl,
+    "Java": FaJava,
+    "JUnit 5": SiJunit5,
+    "TypeScript": SiTypescript,
+    "React": SiReact,
+    "Material-UI": SiMui,
+    "Tailwind CSS": SiTailwindcss,
+    "Radix UI": SiRadixui,
+    "YouTube IFrame API": SiYoutube,
+};
+
+type Tech = keyof typeof techToIcon;
 
 interface ProjectProps {
     title: string;
     subtitle?: string;
     description: string;
-    technologies: string[];
-    sourceCodeUrl: string;
+    technologies: Tech[];
+    sourceCodeUrl?: string;
     liveDemoUrl?: string;
     children?: React.ReactNode;
 }
-
-const techToIcon: {
-    [key: string]: IconType;
-} = {
-    "C++": SiCplusplus,
-    OpenGL: SiOpengl,
-    Java: FaJava,
-    "JUnit 5": SiJunit5,
-    TypeScript: SiTypescript,
-    React: SiReact,
-    "Material-UI": SiMui,
-    "Tailwind CSS": SiTailwindcss,
-    "Radix UI": SiRadixui,
-};
 
 function Project({
     title,
@@ -68,7 +69,9 @@ function Project({
                         ))}
                     </IconRow>
                     <div className="flex gap-4 mt-10">
-                        <ButtonLink href={sourceCodeUrl}>Source code</ButtonLink>
+                        {sourceCodeUrl && (
+                            <ButtonLink href={sourceCodeUrl}>Source code</ButtonLink>
+                        )}
                         {liveDemoUrl && (
                             <ButtonLink href={liveDemoUrl}>Live demo</ButtonLink>
                         )}
@@ -90,6 +93,25 @@ export default function Projects() {
                 <Link href="https://github.com/Acors24">my GitHub profile</Link>
                 .
             </p>
+            <Project
+                title="HOYO-MiXLE"
+                description="A web-based game written in TypeScript using React, inspired by Wordle and its clones. The player has to guess a daily song based on 3 short samples from it. It's a work in progress, but the core functionality is already implemented."
+                technologies={["TypeScript", "React", "YouTube IFrame API", "Tailwind CSS"]}
+                liveDemoUrl="https://acors24.github.io/hoyo-mixle/"
+            >
+                <Gallery
+                    images={[
+                        {
+                            src: "/hoyo-mixle1.png",
+                            alt: "The game being played",
+                        },
+                        {
+                            src: "/hoyo-mixle2.png",
+                            alt: "The game won",
+                        },
+                    ]}
+                />
+            </Project>
             <Project
                 title="Height map viewer"
                 description="A simple height map viewer written in C++ using OpenGL. It allows the user to load height maps from multiple files in a specific format and display them as a 3D model or as a 2D texture."
