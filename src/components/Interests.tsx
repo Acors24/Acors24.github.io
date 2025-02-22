@@ -1,15 +1,14 @@
 import Link from "./Link";
-import Text from "./Text";
-import TextSection from "./TextSection";
 
 export default function Interests() {
-    return (
-        <TextSection title="Interests">
-            <Text>
-                In my spare time, I enjoy creating 3D graphics using{" "}
-                <Link href="https://www.blender.org/">Blender</Link>, learning
-                new technologies, as well as playing video games.
-            </Text>
-        </TextSection>
-    );
+  return (
+    <div className="space-y-4">
+      <h2 className="text-3xl">Interests</h2>
+      <p>
+        In my spare time, I enjoy creating 3D graphics using{" "}
+        <Link href="https://www.blender.org/">Blender</Link>, learning new
+        technologies, as well as playing video games.
+      </p>
+    </div>
+  );
 }

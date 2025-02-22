@@ -1,26 +1,24 @@
-import * as Tooltip from "@radix-ui/react-tooltip";
+import * as RadixTooltip from "@radix-ui/react-tooltip";
 
 interface TooltipProps {
-    children?: React.ReactNode;
-    content: string;
+  children?: React.ReactNode;
+  content: string;
 }
 
-export default ({ children, content }: Readonly<TooltipProps>) => {
-    return (
-        <Tooltip.Provider delayDuration={0}>
-            <Tooltip.Root>
-                <Tooltip.Trigger asChild>
-                    <div className="flex">
-                        {children}
-                    </div>
-                </Tooltip.Trigger>
-                <Tooltip.Portal>
-                    <Tooltip.Content className="rounded bg-white px-4 py-2 text-md drop-shadow-md">
-                        {content}
-                        <Tooltip.Arrow className="fill-white" />
-                    </Tooltip.Content>
-                </Tooltip.Portal>
-            </Tooltip.Root>
-        </Tooltip.Provider>
-    );
-};
+export default function Tooltip({ children, content }: Readonly<TooltipProps>) {
+  return (
+    <RadixTooltip.Provider delayDuration={0}>
+      <RadixTooltip.Root>
+        <RadixTooltip.Trigger asChild>
+          <div className="flex">{children}</div>
+        </RadixTooltip.Trigger>
+        <RadixTooltip.Portal>
+          <RadixTooltip.Content className="rounded bg-white px-4 py-2 text-md drop-shadow-md">
+            {content}
+            <RadixTooltip.Arrow className="fill-white" />
+          </RadixTooltip.Content>
+        </RadixTooltip.Portal>
+      </RadixTooltip.Root>
+    </RadixTooltip.Provider>
+  );
+}

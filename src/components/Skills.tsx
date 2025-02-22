@@ -1,36 +1,33 @@
-import Link from "./Link";
 import List from "./List";
-import ListItem from "./ListItem";
-import Text from "./Text";
-import TextSection from "./TextSection";
 
 export default function Skills() {
   return (
-    <TextSection title="Skills">
-      <Text>I excel at:</Text>
-      <List>
-        <ListItem>C / C++</ListItem>
-        <ListItem>Java & C#</ListItem>
-        <ListItem>JavaScript / TypeScript</ListItem>
-        <ListItem>React</ListItem>
-        <ListItem>Python</ListItem>
-        <ListItem>PostgreSQL</ListItem>
-      </List>
-      <Text>I also have experience with:</Text>
-      <List>
-        <ListItem>Rust</ListItem>
-        <ListItem>
-          <Link href="https://www.figma.com/">Figma</Link>
-        </ListItem>
-      </List>
-      <Text>My soft skills include:</Text>
-      <List>
-        <ListItem>Teamwork</ListItem>
-        <ListItem>Effective communication</ListItem>
-        <ListItem>Work ethic</ListItem>
-        <ListItem>Adaptability</ListItem>
-        <ListItem>Problem-solving</ListItem>
-      </List>
-    </TextSection>
+    <div className="space-y-4">
+      <h2 className="text-3xl">Skills</h2>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <h3 className="text-2xl">Technologies</h3>
+          <List>
+            <li>JavaScript / TypeScript (React, Express)</li>
+            <li>Java (Maven)</li>
+            <li>C / C++</li>
+            <li>Python</li>
+            <li>SQL (PostgreSQL)</li>
+          </List>
+        </div>
+        <div>
+          <h3 className="text-2xl">Tools</h3>
+          <List>
+            <li>Git (GitHub, Bitbucket)</li>
+            <li>Linux</li>
+            <li>Jira</li>
+            <li>Confluence</li>
+            <li>Jenkins</li>
+            <li>Selenium</li>
+            <li>TestRail</li>
+          </List>
+        </div>
+      </div>
+    </div>
   );
 }

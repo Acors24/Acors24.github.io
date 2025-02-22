@@ -1,10 +1,7 @@
-interface ImageProps {
-    src: string;
-    alt: string;
-}
+import React from "react";
 
-export default function Image({ src, alt }: Readonly<ImageProps>) {
-    return (
-        <img src={src} alt={alt} className="rounded-lg drop-shadow-2xl" />
-    );
+export default function Image({ src, className }: React.ComponentProps<"img">) {
+  return (
+    <img src={src} alt="" className={`rounded drop-shadow-xl ${className}`} />
+  );
 }

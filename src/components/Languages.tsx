@@ -1,14 +1,13 @@
 import List from "./List";
-import ListItem from "./ListItem";
-import TextSection from "./TextSection";
 
 export default function Languages() {
-    return (
-        <TextSection title="Languages">
-            <List>
-                <ListItem>Polish - native</ListItem>
-                <ListItem>English - C1</ListItem>
-            </List>
-        </TextSection>
-    );
+  return (
+    <div className="space-y-4">
+      <h2 className="text-3xl">Languages</h2>
+      <List>
+        <li>Polish - native</li>
+        <li>English - fluent (C1)</li>
+      </List>
+    </div>
+  );
 }
