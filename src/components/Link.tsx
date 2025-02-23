@@ -10,7 +10,7 @@ export default function Link({ href, children }: Readonly<LinkProps>) {
     <a
       href={href}
       target="_blank"
-      className="text-primary hover:text-primary-light hover:underline duration-200"
+      className="text-primary hover:text-primary-light hover:underline duration-200 selection:bg-primary selection:text-white"
       rel="noreferrer"
     >
       {children}

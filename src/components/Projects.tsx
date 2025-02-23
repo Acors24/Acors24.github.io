@@ -61,7 +61,7 @@ function Project({
   children,
 }: Readonly<ProjectProps>) {
   return (
-    <div className="my-24 flex lg:flex-row flex-col gap-8 items-center">
+    <div className="my-24 flex lg:flex-row lg:even:flex-row-reverse flex-col gap-8 items-center">
       <div className="flex-1 space-y-8">
         <SectionHeader topLine={title} bottomLine={subtitle} />
         <p>{description}</p>
@@ -98,7 +98,7 @@ export default function Projects(props: React.ComponentProps<"div">) {
       <Project
         title="SQL Murder Mystery"
         subtitle="Thesis; a team project"
-        description="An educational full-stack web-based game about SQL; made mainly with Python, Flask, TypeScript and React."
+        description="A full-stack web-based educational game about SQL; made mainly with Python, Flask, TypeScript and React."
         technologies={[
           "Python",
           "Flask",

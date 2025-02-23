@@ -23,7 +23,7 @@ const sections = [
 
 function App() {
   return (
-    <div className="text-slate-700 max-w-[1200px] mx-auto shadow-xl relative">
+    <div className="text-slate-700 selection:bg-slate-700 selection:text-white max-w-[1200px] bg-white z-0 mx-auto shadow-xl relative">
       <Nav sections={sections.map(({ id, title }) => ({ id, title }))} />
       <div className="md:px-12 px-4">
         {sections.map(({ id, Component }) => (
