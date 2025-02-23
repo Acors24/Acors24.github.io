@@ -1,7 +1,11 @@
 import React from "react";
 
-export default function Image({ src, className }: React.ComponentProps<"img">) {
+export default function Image(props: React.ComponentProps<"img">) {
   return (
-    <img src={src} alt="" className={`rounded drop-shadow-xl ${className}`} />
+    <img
+      {...props}
+      alt=""
+      className={`rounded drop-shadow-xl ${props.className ?? ""}`}
+    />
   );
 }
