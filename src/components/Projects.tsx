@@ -107,7 +107,7 @@ export default function Projects(props: React.ComponentProps<"div">) {
           "React",
           "Tailwind CSS",
         ]}
-        liveDemoUrl="https://sql-murder-mystery.duckdns.org/"
+        liveDemoUrl="https://sql-murder-mystery.ii.uni.wroc.pl/"
       >
         <Gallery
           images={[
