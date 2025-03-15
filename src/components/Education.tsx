@@ -42,6 +42,11 @@ export default function Education() {
         <li>
           <Link href="https://cerc24.ii.uni.wroc.pl/">CERC 2024</Link>
         </li>
+        <li>
+          <Link href="https://math.naboj.org/pl/pl/">
+            Náboj 2025 at University of Economics in Wrocław
+          </Link>
+        </li>
       </List>
       <p>
         I have also contributed to the development of the faculty's system used
